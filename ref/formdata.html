@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<body>
+  <form id="formElem">
+    <h3>Froggy Chair</h3>
+    <input type="hidden" name="id" value="78" />
+    <input type="number" name="amount" value="0" />
+    <input type="submit" />
+  </form>
+
+  <script>
+    const formElem = document.querySelector("#formElem");
+    formElem.onsubmit = (e) => {
+      e.preventDefault();
+
+      let response = new FormData(formElem);
+
+      console.log({
+        id: response.get("id"),
+        amount: response.get("amount"),
+      });
+    };
+  </script>
+</body>

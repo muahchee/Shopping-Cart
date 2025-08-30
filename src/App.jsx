@@ -1,15 +1,21 @@
+import { useState } from "react";
 
+const App = () => {
+  const [heading, setHeading] = useState("Magnificent Monkeys")
 
-function App() {
-
+  const clickHandler = () => {
+    setHeading("Radical Rhinos")
+  }
 
   return (
     <>
-      <h1>Hello, World!</h1>
-
-      <p>Woweeee Oatchi is the best!</p>
+      <button onClick={clickHandler}>
+        Click Me
+      </button>
+      <h1>{heading}</h1>
     </>
-  );
+  )
 }
+
 
 export default App;

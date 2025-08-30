@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > renders magnificent monkeys 1`] = `
+<div>
+  <button>
+    Click Me
+  </button>
+  <h1>
+    Magnificent Monkeys
+  </h1>
+</div>
+`;
+
+exports[`App component > renders shop name header, navbar, and homepage at start 1`] = `
+<div>
+  <button>
+    Click Me
+  </button>
+  <h1>
+    Magnificent Monkeys
+  </h1>
+</div>
+`;
