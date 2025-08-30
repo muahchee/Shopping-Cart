@@ -1,6 +1,17 @@
+import { useState } from "react";
+
 function ShopItem({ handleSubmit, shopItemData }) {
+  const [inputValue, setInputValue] = useState(1);
   if (!shopItemData) {
     return;
+  }
+
+  function handleInputChange(e) {
+    let value = Number(e.target.value);
+    if (value < 1 || typeof(value) !== "number") {
+      value = 1;
+    }
+    setInputValue(value);
   }
   return (
     <>
@@ -10,9 +21,15 @@ function ShopItem({ handleSubmit, shopItemData }) {
         <label htmlFor="amount" name="amount">
           Amount
         </label>
-        <input type="number" id="amount" min={1} />
+        <input
+          type="number"
+          id="amount"
+          min={1}
+          value={inputValue}
+          onChange={handleInputChange}
+        />
         {handleSubmit ? (
-          <button type="submit" onSubmit={handleSubmit}>
+          <button type="submit" onClick={handleSubmit}>
             Add to Cart
           </button>
         ) : (

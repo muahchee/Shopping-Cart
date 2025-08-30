@@ -4,7 +4,6 @@ import userEvent from "@testing-library/user-event";
 import Cart from "../src/sections/Cart";
 
 describe("Shop", () => {
-  it("renders ")
 
   //--mock child components--
   //renders CartItem if selectedArr is not empty
@@ -12,4 +11,5 @@ describe("Shop", () => {
   //don't render a <CartItem /> if a field is missing
   //renders "cart is empty" if selectedArr is empty
   //does not render "there are no products" if there are <ShopItem /> components
+
 })
