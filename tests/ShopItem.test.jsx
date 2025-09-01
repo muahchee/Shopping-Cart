@@ -8,7 +8,7 @@ const shopItemData = {
   price: 33.0,
 };
 
-const handleSubmit = vi.fn((e) => e.preventDefault());
+const handleSubmit = vi.fn();
 
 describe("Shop item", () => {
   it("renders elements if shopItemData prop is provided", () => {

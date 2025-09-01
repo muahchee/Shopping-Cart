@@ -13,9 +13,17 @@ function ShopItem({ handleSubmit, shopItemData }) {
     }
     setInputValue(value);
   }
+
+  function handleClick(e) {
+    e.preventDefault;
+    handleSubmit(e, {
+      id: shopItemData.id,
+      amount: inputValue,
+    });
+  }
+
   return (
-    <>
-      <form>
+      <div>
         <h3>{shopItemData.title || "Title"}</h3>
         <p className="price">${shopItemData.price || "0"}</p>
         <label htmlFor="amount" name="amount">
@@ -29,16 +37,15 @@ function ShopItem({ handleSubmit, shopItemData }) {
           onChange={handleInputChange}
         />
         {handleSubmit ? (
-          <button type="submit" onClick={handleSubmit}>
+          <button type="button" onClick={handleClick}>
             Add to Cart
           </button>
         ) : (
-          <button type="submit" disabled>
+          <button type="button" disabled>
             Add to Cart
           </button>
         )}
-      </form>
-    </>
+      </div>
   );
 }
 
