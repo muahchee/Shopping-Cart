@@ -10,7 +10,7 @@ const cartItemData = {
   amount: 5,
 };
 
-const handleSubmit = vi.fn((e) => e.preventDefault());
+const handleSubmit = vi.fn();
 const handleDelete = vi.fn();
 
 describe("CartItem", () => {
